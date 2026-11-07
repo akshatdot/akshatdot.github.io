@@ -25,7 +25,7 @@ let pictures = [
     caption: "The Pine Trees of Louveciennes, Camille Pissarro, 1870"
   },
   {
-    url: "https://en.wikipedia.org/wiki/The_Burghers_of_Calais#/media/File:Les-bourgeois-de-Calais.jpg",
+    url: "https://upload.wikimedia.org/wikipedia/commons/8/86/Les-bourgeois-de-Calais.jpg",
     caption: "The Burghers of Calais, Memorial Court, Stanford University"
   },
 
