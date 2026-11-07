@@ -8,21 +8,10 @@
       font-family: "Times New Roman", Times, serif;
       background-color: #ffffff;
       color: #000000;
-      max-width: 850px;
+      max-width: 800px; /* Changed from 850px to match resume.html exactly */
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    h2 {
-      font-size: 22px;
-      margin-top: 30px;
-      margin-bottom: 15px;
-      text-align: center;
     }
     h3 {
       font-size: 18px;
@@ -72,18 +61,18 @@
 </head>
 <body>
 
-<h1><a href="resume.html">Akshat Verma</a></h1>
-<h2>Internship Gallery & Projects</h2>
-
-<p style="text-align: center;">
-A collection of media and notes from my time interning at RT Vision Technologies Pvt. Ltd.
-</p>
+<!-- Replaced the top text with just your gallery icon -->
+<div style="text-align: center; margin-bottom: 20px;">
+  <!-- Replace 'gallery_icon.png' with your actual icon file name -->
+  <a href="resume.html"><img src="gallery_icon.png" alt="Gallery Icon" width="80"></a>
+</div>
 
 <hr>
 
 <!-- Project 1: Data Packet Simulator -->
 <div class="gallery-item">
   <div class="gallery-image">
+    <!-- If you move images to a folder, change this to src="images/metals.webp" -->
     <img src="metals.webp" alt="Data Packet Simulator User Interface">
   </div>
   <div class="gallery-text">
@@ -102,6 +91,7 @@ A collection of media and notes from my time interning at RT Vision Technologies
 <!-- Project 2: Raspberry Pi Facial Recognition System -->
 <div class="gallery-item">
   <div class="gallery-image">
+    <!-- If you move images to a folder, change this to src="images/debug.webp" -->
     <img src="debug.webp" alt="Raspberry Pi Setup with Display">
   </div>
   <div class="gallery-text">
@@ -116,8 +106,6 @@ A collection of media and notes from my time interning at RT Vision Technologies
 </div>
 
 <hr>
-
-
 
 <p style="text-align: center; margin-top: 40px;">
   <a href="resume.html">&larr; Back to Resume</a>
