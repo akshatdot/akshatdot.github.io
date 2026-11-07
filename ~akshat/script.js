@@ -41,6 +41,10 @@ let pictures = [
   {
     url: "https://upload.wikimedia.org/wikipedia/commons/0/05/William-Adolphe_Bouguereau_%281825-1905%29_-_Song_of_the_Angels_%281881%29.jpg",
     caption: "Virgin with Angels, William-Adolphe Bouguereau"
+  },
+  {
+    url: "https://upload.wikimedia.org/wikipedia/commons/0/02/Rogelio_de_Egusquiza_-_Tristan_and_Isolt_%28Death%29_-_Google_Art_Project.jpg",
+    caption: "Tristan and Isolt (Death) - Google Art Project"
   }
 ];
 
