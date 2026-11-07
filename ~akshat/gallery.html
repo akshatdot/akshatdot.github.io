@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Akshat Verma - Internship Gallery</title>
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: #ffffff;
+      color: #000000;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    p {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+    a {
+      color: #0000EE;
+    }
+    a:visited {
+      color: #551A8B;
+    }
+    
+    .gallery-item {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 35px;
+      align-items: flex-start;
+    }
+    .gallery-item img {
+      flex-shrink: 0;
+      max-width: 400px;
+      width: 100%;
+      border: 1px solid #999;
+      padding: 3px;
+      background-color: #fff;
+    }
+    .gallery-text {
+      flex: 1;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-item {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .gallery-item img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1><a href="resume.html">Akshat Verma</a></h1>
+<h2>Internship Gallery & Projects</h2>
+
+<p style="text-align: center;">
+A collection of media and notes from my time interning at RT Vision Technologies Pvt. Ltd.
+</p>
+
+<hr>
+
+<!-- Project 1: Data Packet Simulator -->
+<div class="gallery-item">
+  <div class="gallery-image">
+    <img src="metals.webp" alt="Data Packet Simulator User Interface">
+  </div>
+  <div class="gallery-text">
+    <h3>Data Packet Simulator UI</h3>
+    <p>
+      At RTV, I created a simple user interface to simulate various data packets being sent from components present in a train, such as cameras, display units, and controllers of various sorts. 
+    </p>
+    <p>
+      This was part of a larger system-testing effort which included multiple other systems of the company being examined simultaneously. The interface allowed us to mock real-world scenarios and verify system integrity.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+<!-- Project 2: Raspberry Pi Facial Recognition System -->
+<div class="gallery-item">
+  <div class="gallery-image">
+    <img src="debug.webp" alt="Raspberry Pi Setup with Display">
+  </div>
+  <div class="gallery-text">
+    <h3>Facial Recognition Attendance System</h3>
+    <p>
+      Parallel to my main tasks, I explored crafting a facial attendance system using a spare Raspberry Pi Compute Module that was collecting some dust.
+    </p>
+    <p>
+      This independent project allowed me to dive into hardware-software integration, exploring how lightweight compute modules can handle real-time image processing tasks in constrained environments. The setup shown here displays the system interface running on the Pi.
+    </p>
+  </div>
+</div>
+
+<hr>
+
+
+
+<p style="text-align: center; margin-top: 40px;">
+  <a href="resume.html">&larr; Back to Resume</a>
+</p>
+
+</body>
+</html>
