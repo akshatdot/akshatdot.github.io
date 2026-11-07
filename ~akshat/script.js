@@ -39,7 +39,7 @@ let pictures = [
     caption: "Scott E. Parazynski performs a repair of a torn solar panel on the P6 truss, reinstalled on the ISS four days earlier."
   },
   {
-    url: "https://upload.wikimedia.org/wikipedia/commons/0/05/William-Adolphe_Bouguereau_%281825-1905%29_-_Song_of_the_Angels_%281881%29.jpg?",
+    url: "https://upload.wikimedia.org/wikipedia/commons/0/05/William-Adolphe_Bouguereau_%281825-1905%29_-_Song_of_the_Angels_%281881%29.jpg",
     caption: "Virgin with Angels, William-Adolphe Bouguereau"
   }
 ];
