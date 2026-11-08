@@ -37,16 +37,7 @@ let pictures = [
   {
     url: "https://upload.wikimedia.org/wikipedia/commons/1/18/STS-120_EVA_Scott_Parazynski.jpg",
     caption: "Scott E. Parazynski performs a repair of a torn solar panel"
-  },
-  {
-    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Bartolomeo_Cavarozzi_-_Virgin_and_Child_with_Angels_-_BF.1979.22_-_Museum_of_Fine_Arts.jpg/1280px-Bartolomeo_Cavarozzi_-_Virgin_and_Child_with_Angels_-_BF.1979.22_-_Museum_of_Fine_Arts.jpg",
-    caption: "Bartolomeo Cavarozzi, Virgin and Child with Angels"
-  },
-  {
-    url: "https://upload.wikimedia.org/wikipedia/commons/b/b2/Jezero_sol_0089_Mastcam-Z_229%C2%B0-231%C2%B0_16-13_LMST.gif"
-    caption: "Sol 89"
   }
-
 ];
 
 let current = 0;
