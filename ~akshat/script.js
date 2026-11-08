@@ -5,7 +5,7 @@ let pictures = [
   },
   {
     url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/STS-130_launch.jpg/1920px-STS-130_launch.jpg",
-    caption: "Space Shuttle Endeavour launches from Kennedy Space Center, 8 February 2010."
+    caption: "Space Shuttle Endeavour launches from Kennedy Space Center, 8 Feb 2010."
   },
 
   {
@@ -36,11 +36,11 @@ let pictures = [
 
   {
     url: "https://upload.wikimedia.org/wikipedia/commons/1/18/STS-120_EVA_Scott_Parazynski.jpg",
-    caption: "Scott E. Parazynski performs a repair of a torn solar panel on the P6 truss, reinstalled on the ISS four days earlier."
+    caption: "Scott E. Parazynski performs a repair of a torn solar panel"
   },
   {
-    url: "https://upload.wikimedia.org/wikipedia/commons/0/05/William-Adolphe_Bouguereau_%281825-1905%29_-_Song_of_the_Angels_%281881%29.jpg",
-    caption: "Virgin with Angels, William-Adolphe Bouguereau"
+    url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Bartolomeo_Cavarozzi_-_Virgin_and_Child_with_Angels_-_BF.1979.22_-_Museum_of_Fine_Arts.jpg/1280px-Bartolomeo_Cavarozzi_-_Virgin_and_Child_with_Angels_-_BF.1979.22_-_Museum_of_Fine_Arts.jpg",
+    caption: "Bartolomeo Cavarozzi<br>Virgin and Child with Angels"
   },
   {
     url: "https://upload.wikimedia.org/wikipedia/commons/0/02/Rogelio_de_Egusquiza_-_Tristan_and_Isolt_%28Death%29_-_Google_Art_Project.jpg",
