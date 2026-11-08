@@ -64,9 +64,6 @@
 
 
 
-
-
-// 1. List the topics you want your page to rotate through!
 const keywords = [
   "NASA space exploration",
   "Jet Propulsion Laboratory",
@@ -86,12 +83,8 @@ async function changePicture() {
   const imgEl = document.getElementById("secretPicture");
   const captionEl = document.getElementById("pictureCaption");
 
-  // Indicate loading state
-  captionEl.textContent = "Searching the archives...";
-  imgEl.style.opacity = "0.6"; // Visual feedback while fetching
-
   try {
-    // 2. Pick a random keyword from your topic list (avoid repeating the exact same one back-to-back)
+    // 1. Pick a topic
     let nextIndex;
     do {
       nextIndex = Math.floor(Math.random() * keywords.length);
@@ -100,7 +93,7 @@ async function changePicture() {
     lastKeywordIndex = nextIndex;
     const searchTopic = keywords[nextIndex];
 
-    // 3. Search Wikimedia Commons API for images matching this topic
+    // 2. Fetch search results from Wikimedia
     const searchUrl = `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(searchTopic)}&srnamespace=6&format=json&origin=*`;
     const searchRes = await fetch(searchUrl);
     const searchData = await searchRes.json();
@@ -110,28 +103,29 @@ async function changePicture() {
       throw new Error("No images found for topic");
     }
 
-    // Pick a random image result from the search matches
     const randomResult = searchResults[Math.floor(Math.random() * searchResults.length)];
     const pageId = randomResult.pageid;
 
-    // 4. Fetch the direct URL and title for the chosen image page ID
+    // 3. Get image URL
     const infoUrl = `https://commons.wikimedia.org/w/api.php?action=query&pageids=${pageId}&prop=imageinfo&iiprop=url|extmetadata&format=json&origin=*`;
     const infoRes = await fetch(infoUrl);
     const infoData = await infoRes.json();
 
-    const imageInfo = infoData.query.pages[pageId].imageinfo[0];
+    const newSrc = infoData.query.pages[pageId].imageinfo[0].url;
+    const rawTitle = randomResult.title.replace(/^File:/i, "").replace(/\.[^/.]+$/, "");
 
-    // 5. Update the DOM elements with the new image and clean caption
-    imgEl.src = imageInfo.url;
-    
-    // Clean up file title for display (removes "File:" and extension like ".jpg")
-    let rawTitle = randomResult.title.replace(/^File:/i, "").replace(/\.[^/.]+$/, "");
+    // 4. PRELOAD THE IMAGE IN BACKGROUND BEFORE DISPLAYING
+    const tempImg = new Image();
+    tempImg.src = newSrc;
+
+    // Wait until the image bytes are completely downloaded
+    await tempImg.decode();
+
+    // 5. Update BOTH image and caption at the exact same millisecond
+    imgEl.src = newSrc;
     captionEl.textContent = rawTitle;
 
   } catch (error) {
     console.error("Wikimedia API Error:", error);
-    captionEl.textContent = "Signal lost in transmission. Click to try again!";
-  } finally {
-    imgEl.style.opacity = "1";
   }
 }
