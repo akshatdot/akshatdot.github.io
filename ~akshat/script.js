@@ -40,12 +40,9 @@ let pictures = [
   },
   {
     url: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Bartolomeo_Cavarozzi_-_Virgin_and_Child_with_Angels_-_BF.1979.22_-_Museum_of_Fine_Arts.jpg/1280px-Bartolomeo_Cavarozzi_-_Virgin_and_Child_with_Angels_-_BF.1979.22_-_Museum_of_Fine_Arts.jpg",
-    caption: "Bartolomeo Cavarozzi<br>Virgin and Child with Angels"
-  },
-  {
-    url: "https://upload.wikimedia.org/wikipedia/commons/0/02/Rogelio_de_Egusquiza_-_Tristan_and_Isolt_%28Death%29_-_Google_Art_Project.jpg",
-    caption: "Tristan and Isolt (Death) - Google Art Project"
+    caption: "Bartolomeo Cavarozzi, Virgin and Child with Angels"
   }
+
 ];
 
 let current = 0;
