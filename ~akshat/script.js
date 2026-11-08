@@ -62,8 +62,6 @@
 //     pictures[current].caption;
 // }
 
-
-
 const keywords = [
   "NASA space exploration",
   "Jet Propulsion Laboratory",
@@ -83,8 +81,11 @@ async function changePicture() {
   const imgEl = document.getElementById("secretPicture");
   const captionEl = document.getElementById("pictureCaption");
 
+  // 1. INSTANT FEEDBACK: Update caption immediately on click (keep current image visible)
+  captionEl.textContent = "Searching the archives...";
+
   try {
-    // 1. Pick a topic
+    // 2. Pick next topic
     let nextIndex;
     do {
       nextIndex = Math.floor(Math.random() * keywords.length);
@@ -93,7 +94,7 @@ async function changePicture() {
     lastKeywordIndex = nextIndex;
     const searchTopic = keywords[nextIndex];
 
-    // 2. Fetch search results from Wikimedia
+    // 3. Search Wikimedia
     const searchUrl = `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(searchTopic)}&srnamespace=6&format=json&origin=*`;
     const searchRes = await fetch(searchUrl);
     const searchData = await searchRes.json();
@@ -106,7 +107,7 @@ async function changePicture() {
     const randomResult = searchResults[Math.floor(Math.random() * searchResults.length)];
     const pageId = randomResult.pageid;
 
-    // 3. Get image URL
+    // 4. Fetch details
     const infoUrl = `https://commons.wikimedia.org/w/api.php?action=query&pageids=${pageId}&prop=imageinfo&iiprop=url|extmetadata&format=json&origin=*`;
     const infoRes = await fetch(infoUrl);
     const infoData = await infoRes.json();
@@ -114,18 +115,17 @@ async function changePicture() {
     const newSrc = infoData.query.pages[pageId].imageinfo[0].url;
     const rawTitle = randomResult.title.replace(/^File:/i, "").replace(/\.[^/.]+$/, "");
 
-    // 4. PRELOAD THE IMAGE IN BACKGROUND BEFORE DISPLAYING
+    // 5. Preload the new image in background memory
     const tempImg = new Image();
     tempImg.src = newSrc;
-
-    // Wait until the image bytes are completely downloaded
     await tempImg.decode();
 
-    // 5. Update BOTH image and caption at the exact same millisecond
+    // 6. SWAP: Update the picture and display the final title together
     imgEl.src = newSrc;
     captionEl.textContent = rawTitle;
 
   } catch (error) {
     console.error("Wikimedia API Error:", error);
+    captionEl.textContent = "Signal lost. Click to try again!";
   }
 }
