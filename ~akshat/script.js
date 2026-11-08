@@ -47,11 +47,18 @@ let pictures = [
 let current = 0;
 
 function changePicture() {
-  current = (current + 1) % pictures.length;
+  let next;
+
+  do {
+    next = Math.floor(Math.random() * pictures.length);
+  } while (next === current);
+
+  current = next;
 
   document.getElementById("secretPicture").src =
     pictures[current].url;
 
   document.getElementById("pictureCaption").textContent =
     pictures[current].caption;
+}
 }
