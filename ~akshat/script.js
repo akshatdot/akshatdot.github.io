@@ -39,7 +39,7 @@ let pictures = [
     caption: "Scott E. Parazynski performs a repair of a torn solar panel"
   },
   {
-    url:"https://upload.wikimedia.org/wikipedia/commons/9/9d/Antinous_Aristaeus_Louvre_Ma578.jpg"
+    url:"https://upload.wikimedia.org/wikipedia/commons/9/9d/Antinous_Aristaeus_Louvre_Ma578.jpg",
     caption: "Antinous as Aristaeus"
   }
 ];
@@ -61,4 +61,4 @@ function changePicture() {
   document.getElementById("pictureCaption").textContent =
     pictures[current].caption;
 }
-}
+
