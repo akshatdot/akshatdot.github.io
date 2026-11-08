@@ -37,6 +37,10 @@ let pictures = [
   {
     url: "https://upload.wikimedia.org/wikipedia/commons/1/18/STS-120_EVA_Scott_Parazynski.jpg",
     caption: "Scott E. Parazynski performs a repair of a torn solar panel"
+  },
+  {
+    url:"https://upload.wikimedia.org/wikipedia/commons/9/9d/Antinous_Aristaeus_Louvre_Ma578.jpg"
+    caption: "Antinous as Aristaeus"
   }
 ];
 
